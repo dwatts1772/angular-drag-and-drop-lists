@@ -10,7 +10,7 @@
             dnd-draggable="item"
             dnd-effect-allowed="move"
             dnd-moved="list.splice($index, 1)"
-            dnd-selected="models.selected = item"
+            dnd-selected="models.selected != item ? models.selected = item : models.selected = null"
             ng-class="{selected: models.selected === item}"
             ng-include="item.type + '.html'">
         </li>
